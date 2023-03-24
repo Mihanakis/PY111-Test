@@ -11,18 +11,19 @@ ACAA
 
 from random import choice
 from collections import Counter
+from random import randint
 
 
 massive = ["A", "C", "T", "G"]
 
 lst = []
-for n in range(10):
-    lst.append(choice(massive) + choice(massive) + choice(massive) + choice(massive))
+for n in range(randint(5, 15)):
+    lst.append("".join([choice(massive) for m in range(4)]))
 
 print(lst)
 
 count, output = [], []
-for i in range(4):
+for i in range(len(lst[0])):
     for j in range(len(lst)):
         count.append(lst[j][i])
     str_ = "".join(count)
