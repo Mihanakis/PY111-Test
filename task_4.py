@@ -23,7 +23,7 @@ print(lst)
 
 count, output = [], []
 for i in range(4):
-    for j in range(len(lst) - 1):
+    for j in range(len(lst)):
         count.append(lst[j][i])
     str_ = "".join(count)
     c = Counter(str_)
